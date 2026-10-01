@@ -9,6 +9,8 @@ import GoalsProgressPreview from "@/components/home/GoalsProgressPreview";
 import AppPreview from "@/components/home/AppPreview";
 import FinalCTA from "@/components/home/FinalCTA";
 
+import LandingAppNotice from "@/components/home/LandingAppNotice";
+
 export default function HomePage() {
   return (
     <>
@@ -22,6 +24,8 @@ export default function HomePage() {
       <GoalsProgressPreview />
       <AppPreview />
       <FinalCTA />
+
+      <LandingAppNotice />
     </>
   );
 }

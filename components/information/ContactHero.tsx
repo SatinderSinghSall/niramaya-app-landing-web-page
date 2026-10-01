@@ -3,28 +3,46 @@ import Container from "@/components/common/Container";
 
 export default function ContactHero() {
   return (
-    <section className="bg-[#F7F8F4]">
+    <section className="border-b border-[#DDE3D9] bg-[#F7F8F4]">
       <Container>
-        <div className="py-20 sm:py-24">
-          <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 border border-[#DDE3D9] bg-white px-4 py-2 text-sm font-medium text-[#4D6A50]">
-              <Mail className="h-4 w-4" />
-              Contact Niramaya
+        <div className="py-12 sm:py-14 lg:py-16">
+          <div className="grid items-end gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
+            {/* Main copy */}
+            <div>
+              <div className="inline-flex items-center gap-2 border border-[#D8E0D5] bg-white px-3 py-1.5">
+                <Mail
+                  className="h-3.5 w-3.5 text-[#4D6A50]"
+                  strokeWidth={1.7}
+                />
+
+                <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#4D6A50]">
+                  Contact Niramaya
+                </span>
+              </div>
+
+              <h1 className="mt-5 max-w-3xl text-[3rem] font-semibold leading-[0.98] tracking-[-0.055em] text-[#263F31] sm:text-[4rem] lg:text-[4.5rem]">
+                Let&apos;s start a
+                <span className="block text-[#4D6A50]">conversation.</span>
+              </h1>
             </div>
 
-            <h1 className="mt-7 text-5xl font-semibold tracking-[-0.045em] text-[#263F31] sm:text-6xl lg:text-7xl">
-              Let&apos;s start a conversation.
-            </h1>
+            {/* Supporting copy */}
+            <div className="max-w-md lg:pb-1">
+              <p className="text-sm leading-7 text-[#69766D] sm:text-base">
+                Have a question about Niramaya, the application or the website?
+                Send us a message and we&apos;ll get you to the right place.
+              </p>
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#6D796F]">
-              Have a question about Niramaya, the application or the website?
-              Send us a message and we&apos;ll have a clear place to start.
-            </p>
-          </div>
-
-          <div className="mt-12 flex items-center gap-2 text-sm font-medium text-[#4D6A50]">
-            <ArrowDown className="h-4 w-4" />
-            Contact form
+              <div className="mt-5 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#7F8A81]">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full border border-[#CBD7C8] bg-white">
+                  <ArrowDown
+                    className="h-3.5 w-3.5 text-[#4D6A50]"
+                    strokeWidth={1.7}
+                  />
+                </span>
+                Contact form
+              </div>
+            </div>
           </div>
         </div>
       </Container>

@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
+
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import BackToTop from "@/components/common/BackToTop";
+import ScrollToTop from "@/components/common/ScrollToTop";
+
 import { SITE_CONFIG } from "@/lib/constants";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -72,6 +77,9 @@ export default function RootLayout({
         <Navbar />
 
         <main>{children}</main>
+
+        <BackToTop />
+        <ScrollToTop />
 
         <Footer />
       </body>

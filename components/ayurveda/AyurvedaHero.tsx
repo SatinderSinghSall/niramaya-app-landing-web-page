@@ -1,105 +1,141 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Leaf, Search, Sparkles, UserRound } from "lucide-react";
+import { ArrowRight, Leaf } from "lucide-react";
+
 import Container from "@/components/common/Container";
+
+import screen15 from "@/assets/images/app-screenshots/Screen-15.jpg";
+import screen16 from "@/assets/images/app-screenshots/Screen-16.jpg";
+import screen17 from "@/assets/images/app-screenshots/Screen-17.jpg";
 
 export default function AyurvedaHero() {
   return (
-    <section className="relative overflow-hidden bg-[#F4F1E8]">
-      <div className="pointer-events-none absolute -left-28 top-0 h-80 w-80 rounded-full border border-[#8A815F]/10" />
-      <div className="pointer-events-none absolute -right-24 bottom-[-100px] h-96 w-96 rounded-full bg-[#E7E2D3]" />
+    <section className="relative overflow-hidden border-b border-[#DDD8C9] bg-[#F4F1E8]">
+      {/* Subtle background detail */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-44 -top-44 h-[520px] w-[520px] rounded-full border border-[#8A815F]/10"
+      />
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-52 -right-36 h-[560px] w-[560px] rounded-full bg-[#E7E2D3]/60"
+      />
 
       <Container>
-        <div className="grid min-h-[680px] items-center gap-16 py-20 lg:grid-cols-[1fr_0.9fr] lg:py-24">
-          <div className="relative z-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#8A815F]/15 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#716A4F]">
-              <Leaf className="h-3.5 w-3.5" />
-              Niramaya Ayurveda
+        <div className="relative grid items-center gap-10 py-10 sm:py-12 lg:min-h-[570px] lg:grid-cols-[0.95fr_1.05fr] lg:gap-8 lg:py-10">
+          {/* ====================================================== */}
+          {/* LEFT — COPY                                             */}
+          {/* ====================================================== */}
+
+          <div className="relative z-10 max-w-2xl">
+            <div className="inline-flex items-center gap-2 border border-[#D8D1BF] bg-[#FAF8F1] px-3.5 py-2">
+              <Leaf className="h-3.5 w-3.5 text-[#716A4F]" strokeWidth={1.7} />
+
+              <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#716A4F]">
+                Niramaya Ayurveda
+              </span>
             </div>
 
-            <h1 className="mt-7 max-w-3xl text-5xl font-semibold leading-[0.96] tracking-[-0.05em] text-[#30372D] sm:text-6xl lg:text-7xl">
+            <h1 className="mt-6 max-w-[650px] text-[3.2rem] font-semibold leading-[0.94] tracking-[-0.055em] text-[#30372D] sm:text-[4rem] lg:text-[4.5rem]">
               Explore the wisdom
               <span className="block text-[#716A4F]">of Ayurveda.</span>
             </h1>
 
-            <p className="mt-7 max-w-xl text-base leading-7 text-[#6F746B] sm:text-lg">
+            <p className="mt-6 max-w-xl text-[15px] leading-7 text-[#687068] sm:text-base">
               Discover Ayurvedic wellness content, recommendations, search and
-              consultation workflows within the Niramaya experience.
+              consultation experiences within Niramaya.
             </p>
 
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/app"
-                className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#30372D] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#4D6A50] hover:shadow-xl"
+                className="group inline-flex h-12 items-center justify-center gap-3 rounded-full bg-[#30372D] pl-6 pr-2 text-sm font-semibold !text-white transition-colors duration-200 hover:bg-[#4D6A50]"
               >
-                Explore in the app
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 transition-transform group-hover:translate-x-1">
-                  <ArrowRight className="h-4 w-4" />
+                <span className="!text-white">Explore in the app</span>
+
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10">
+                  <ArrowRight
+                    className="h-4 w-4 !text-white transition-transform duration-200 group-hover:translate-x-0.5"
+                    strokeWidth={1.8}
+                  />
                 </span>
               </Link>
 
               <Link
                 href="/wellness"
-                className="inline-flex items-center justify-center rounded-full border border-[#30372D]/15 bg-white/70 px-6 py-3.5 text-sm font-semibold text-[#30372D] transition-all hover:bg-white"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-[#30372D]/15 bg-[#FAF8F1] px-6 text-sm font-semibold !text-[#30372D] transition-colors duration-200 hover:bg-white"
               >
-                Back to wellness
+                <span className="!text-[#30372D]">Back to wellness</span>
               </Link>
             </div>
           </div>
 
-          {/* Visual */}
-          <div className="relative mx-auto w-full max-w-[470px]">
-            <div className="absolute inset-7 rounded-[2.5rem] bg-[#716A4F]" />
+          {/* ====================================================== */}
+          {/* RIGHT — THREE APP SCREENS                               */}
+          {/* ====================================================== */}
 
-            <div className="relative overflow-hidden rounded-[2.5rem] border border-white bg-[#FFFDF8] p-5 shadow-[0_30px_80px_rgba(70,65,45,0.14)] sm:p-7">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#9B9A8E]">
-                    Ayurveda
-                  </p>
+          <div className="relative mx-auto h-[410px] w-full max-w-[560px] sm:h-[460px] lg:h-[500px]">
+            {/* Soft grounding */}
+            <div
+              aria-hidden="true"
+              className="absolute bottom-5 left-1/2 h-32 w-72 -translate-x-1/2 rounded-full bg-[#8A815F]/10 blur-3xl"
+            />
 
-                  <h2 className="mt-1 text-2xl font-semibold text-[#30372D]">
-                    Discover wellness
-                  </h2>
-                </div>
-
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#F1EEE3]">
-                  <Leaf className="h-5 w-5 text-[#716A4F]" />
+            {/* Left phone */}
+            <div className="absolute left-[4%] top-12 z-10 w-[150px] rotate-[-7deg] sm:left-[5%] sm:w-[175px] lg:left-[3%] lg:top-16 lg:w-[190px]">
+              <div className="rounded-[2.1rem] border-[6px] border-[#30372D] bg-[#30372D] p-[3px] shadow-[0_22px_50px_rgba(48,55,45,0.14)]">
+                <div className="overflow-hidden rounded-[1.7rem]">
+                  <Image
+                    src={screen16}
+                    alt="Niramaya Ayurveda app screen"
+                    width={1080}
+                    height={2400}
+                    className="block h-auto w-full"
+                  />
                 </div>
               </div>
+            </div>
 
-              <div className="mt-7 grid gap-3">
-                <div className="rounded-[1.5rem] bg-[#716A4F] p-6 text-white">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10">
-                    <Sparkles className="h-5 w-5 text-[#E9E4D3]" />
-                  </div>
-
-                  <p className="mt-9 text-[10px] uppercase tracking-[0.18em] text-white/45">
-                    Explore
-                  </p>
-
-                  <h3 className="mt-2 text-2xl font-semibold">
-                    Ayurvedic content
-                  </h3>
-
-                  <p className="mt-3 text-xs leading-5 text-white/55">
-                    Browse wellness-oriented Ayurveda information and
-                    recommendations.
-                  </p>
+            {/* Center / main phone */}
+            <div className="absolute left-1/2 top-0 z-30 w-[205px] -translate-x-1/2 sm:w-[235px] lg:w-[250px]">
+              <div className="rounded-[2.65rem] border-[7px] border-[#30372D] bg-[#30372D] p-[3px] shadow-[0_30px_75px_rgba(48,55,45,0.2)]">
+                <div className="overflow-hidden rounded-[2.2rem]">
+                  <Image
+                    src={screen15}
+                    alt="Niramaya Ayurveda experience"
+                    width={1080}
+                    height={2400}
+                    priority
+                    className="block h-auto w-full"
+                  />
                 </div>
+              </div>
+            </div>
 
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="rounded-2xl bg-[#F1EEE3] p-5">
-                    <Search className="h-4 w-4 text-[#716A4F]" />
-                    <p className="mt-6 text-xs font-semibold text-[#30372D]">
-                      Search
-                    </p>
-                  </div>
-
-                  <div className="rounded-2xl bg-[#30372D] p-5 text-white">
-                    <UserRound className="h-4 w-4 text-[#DAD5C2]" />
-                    <p className="mt-6 text-xs font-semibold">Consultation</p>
-                  </div>
+            {/* Right phone */}
+            <div className="absolute right-[4%] top-12 z-10 w-[150px] rotate-[7deg] sm:right-[5%] sm:w-[175px] lg:right-[3%] lg:top-16 lg:w-[190px]">
+              <div className="rounded-[2.1rem] border-[6px] border-[#30372D] bg-[#30372D] p-[3px] shadow-[0_22px_50px_rgba(48,55,45,0.14)]">
+                <div className="overflow-hidden rounded-[1.7rem]">
+                  <Image
+                    src={screen17}
+                    alt="Niramaya Ayurveda app screen"
+                    width={1080}
+                    height={2400}
+                    className="block h-auto w-full"
+                  />
                 </div>
+              </div>
+            </div>
+
+            {/* Small caption */}
+            <div className="absolute bottom-0 left-1/2 z-40 -translate-x-1/2 border border-[#D8D1BF] bg-[#FAF8F1] px-4 py-2.5">
+              <div className="flex items-center gap-2 whitespace-nowrap">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#716A4F]" />
+
+                <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#716A4F]">
+                  Ayurveda in Niramaya
+                </span>
               </div>
             </div>
           </div>

@@ -21,7 +21,7 @@ export const featureGroups: FeatureGroup[] = [
     eyebrow: "01 · Your foundation",
     title: "Start with a better understanding of yourself.",
     description:
-      "Niramaya begins by helping you build a personal wellness context through onboarding information about your health, lifestyle, wellbeing and preferences.",
+      "Build your personal wellness context through guided onboarding across your health, lifestyle, wellbeing and preferences.",
     accent: "light",
     features: [
       {
@@ -29,43 +29,63 @@ export const featureGroups: FeatureGroup[] = [
         title: "Personalized Onboarding",
         category: "Personalization",
         description:
-          "Build your wellness profile through a structured onboarding experience designed around your individual context.",
+          "Build your wellness context through a structured onboarding experience.",
         highlight: true,
       },
       {
         number: "02",
-        title: "Health Profile",
-        category: "Health",
+        title: "About You",
+        category: "Personalization",
         description:
-          "Keep important health-related information organized as part of your personal wellness profile.",
+          "Provide personal information that forms part of your wellness profile.",
       },
       {
         number: "03",
-        title: "Lifestyle Information",
-        category: "Lifestyle",
+        title: "Physical Health",
+        category: "Health",
         description:
-          "Capture lifestyle information that contributes to a broader understanding of your everyday wellbeing.",
+          "Capture physical-health information as part of your wellness context.",
       },
       {
         number: "04",
-        title: "Nutrition & Sleep",
-        category: "Wellbeing",
+        title: "Lifestyle Information",
+        category: "Lifestyle",
         description:
-          "Include nutrition and sleep information as part of your overall wellness context.",
+          "Capture lifestyle information that contributes to your everyday wellbeing.",
       },
       {
         number: "05",
-        title: "Fitness & Yoga Preferences",
-        category: "Movement",
+        title: "Nutrition",
+        category: "Nutrition",
         description:
-          "Share movement, fitness and Yoga-related preferences that help shape your wellness experience.",
+          "Include nutrition-related information in your wellness context.",
       },
       {
         number: "06",
+        title: "Sleep & Recovery",
+        category: "Wellbeing",
+        description:
+          "Include sleep-related information as part of your personal wellness context.",
+      },
+      {
+        number: "07",
+        title: "Wellbeing",
+        category: "Wellbeing",
+        description:
+          "Capture broader wellbeing information during your onboarding journey.",
+      },
+      {
+        number: "08",
+        title: "Fitness & Yoga Preferences",
+        category: "Movement",
+        description: "Share movement, fitness and Yoga-related preferences.",
+      },
+      {
+        number: "09",
         title: "Wellness Preferences",
         category: "Personalization",
         description:
-          "Define preferences that help make your experience more relevant to the areas you care about.",
+          "Define the preferences and wellness areas that matter to you.",
       },
     ],
   },
@@ -75,44 +95,73 @@ export const featureGroups: FeatureGroup[] = [
     eyebrow: "02 · Understand & progress",
     title: "Turn wellness intentions into something you can follow.",
     description:
-      "Niramaya brings your dashboard, goals and progress together so your wellness journey has a clear place to begin and continue.",
+      "Bring your dashboard, health profile, goals and progress together so your journey has a clear place to begin and continue.",
     accent: "dark",
     features: [
       {
-        number: "07",
+        number: "10",
         title: "Personalized Dashboard",
         category: "Dashboard",
         description:
-          "Get a focused overview of your wellness information and the areas you are working on.",
+          "Get a focused overview of your wellness information and active areas.",
         highlight: true,
       },
       {
-        number: "08",
+        number: "11",
+        title: "Health Profile",
+        category: "Health",
+        description: "View your personal health and wellness information.",
+      },
+      {
+        number: "12",
+        title: "Health Profile Editing",
+        category: "Health",
+        description: "Update your health profile as your information changes.",
+      },
+      {
+        number: "13",
         title: "Wellness Goals",
         category: "Goals",
         description:
-          "Create goals around the areas of wellbeing you want to improve or maintain.",
+          "Create goals around the areas of wellbeing you want to work on.",
       },
       {
-        number: "09",
-        title: "Goal Progress Tracking",
+        number: "14",
+        title: "Goal Creation",
         category: "Goals",
         description:
-          "Follow progress toward your active goals and understand how your journey is developing.",
+          "Add a new wellness goal through the dedicated goal experience.",
       },
       {
-        number: "10",
-        title: "Progress Journal",
+        number: "15",
+        title: "Goal Details",
+        category: "Goals",
+        description: "View the details of an individual wellness goal.",
+      },
+      {
+        number: "16",
+        title: "Goal Progress Tracking",
+        category: "Goals",
+        description: "Follow progress toward your active wellness goals.",
+      },
+      {
+        number: "17",
+        title: "Progress Tracking",
         category: "Progress",
         description:
-          "Record progress information and build a clearer picture of your wellness journey over time.",
+          "Record and review progress throughout your wellness journey.",
       },
       {
-        number: "11",
-        title: "Health Profile Management",
-        category: "Health",
-        description:
-          "Review and manage your health profile as your personal information changes.",
+        number: "18",
+        title: "Progress Entry Creation",
+        category: "Progress",
+        description: "Add new progress information to your journey.",
+      },
+      {
+        number: "19",
+        title: "Progress Details",
+        category: "Progress",
+        description: "Review individual progress records.",
       },
     ],
   },
@@ -126,47 +175,56 @@ export const featureGroups: FeatureGroup[] = [
     accent: "light",
     features: [
       {
-        number: "12",
+        number: "20",
         title: "Explore Wellness",
         category: "Explore",
         description:
-          "Browse wellness experiences and information across different areas in one place.",
+          "Browse wellness experiences and information across different areas.",
         highlight: true,
       },
       {
-        number: "13",
+        number: "21",
         title: "Personalized Recommendations",
         category: "Recommendations",
         description:
           "Discover recommendations informed by your wellness context and interests.",
       },
       {
-        number: "14",
+        number: "22",
         title: "Wellness Search",
         category: "Discovery",
-        description:
-          "Find relevant wellness content and experiences through the app's search functionality.",
+        description: "Find relevant wellness content through search.",
       },
       {
-        number: "15",
+        number: "23",
         title: "Favorites",
         category: "Personalization",
         description:
           "Keep useful wellness content and experiences accessible through your favorites.",
       },
       {
-        number: "16",
+        number: "24",
         title: "Yoga",
         category: "Movement",
-        description:
-          "Explore Yoga practices and information as part of your broader wellness journey.",
+        description: "Explore Yoga practices and information.",
       },
       {
-        number: "17",
+        number: "25",
+        title: "Yoga Details",
+        category: "Movement",
+        description: "Open and explore individual Yoga content.",
+      },
+      {
+        number: "26",
         title: "Ayurveda",
         category: "Traditional Wellness",
-        description:
-          "Discover Ayurveda-focused information and recommendations within the Niramaya experience.",
+        description: "Discover Ayurveda-focused information and experiences.",
+      },
+      {
+        number: "27",
+        title: "Ayurveda Details",
+        category: "Traditional Wellness",
+        description: "Open and explore individual Ayurveda content.",
       },
     ],
   },
@@ -176,44 +234,41 @@ export const featureGroups: FeatureGroup[] = [
     eyebrow: "04 · Professional support",
     title: "Connect your wellness journey with professional consultation.",
     description:
-      "Niramaya includes consultation experiences designed to help users connect with Ayurvedic professionals.",
+      "Niramaya includes dedicated consultation experiences designed around Ayurvedic professional support.",
     accent: "dark",
     features: [
       {
-        number: "18",
+        number: "28",
         title: "Ayurvedic Consultation",
         category: "Consultation",
         description:
-          "Connect with an Ayurvedic consultant through the consultation experience.",
+          "Connect with an Ayurvedic professional through the consultation experience.",
         highlight: true,
       },
       {
-        number: "19",
-        title: "Online Consultation",
+        number: "29",
+        title: "Consultation Discovery",
         category: "Consultation",
-        description:
-          "Access consultation options designed for online interaction with professionals.",
+        description: "Explore the available consultation experience.",
       },
       {
-        number: "20",
-        title: "Offline Consultation",
-        category: "Consultation",
-        description:
-          "Support consultation experiences that can take place offline.",
-      },
-      {
-        number: "21",
+        number: "30",
         title: "Consultation Booking",
         category: "Booking",
         description:
           "Book an available consultation through the dedicated booking experience.",
       },
       {
-        number: "22",
+        number: "31",
+        title: "Consultation Details",
+        category: "Consultation",
+        description: "View an individual consultation and its information.",
+      },
+      {
+        number: "32",
         title: "Consultation History",
         category: "Consultation",
-        description:
-          "Review your previous consultation activity from one place.",
+        description: "Review your previous consultation activity.",
       },
     ],
   },
@@ -223,41 +278,40 @@ export const featureGroups: FeatureGroup[] = [
     eyebrow: "05 · Stay connected",
     title: "Keep your Niramaya experience under your control.",
     description:
-      "Manage your profile, notifications and account preferences as your wellness journey evolves.",
+      "Manage your profile, notifications, settings and account information as your wellness journey evolves.",
     accent: "light",
     features: [
       {
-        number: "23",
+        number: "33",
         title: "Notifications",
         category: "Engagement",
         description:
           "Stay informed through notifications relevant to your Niramaya experience.",
       },
       {
-        number: "24",
+        number: "34",
         title: "Profile Management",
         category: "Account",
         description: "View and manage your personal profile information.",
       },
       {
-        number: "25",
+        number: "35",
+        title: "Profile Editing",
+        category: "Account",
+        description: "Update your personal profile information.",
+      },
+      {
+        number: "36",
         title: "App Settings",
         category: "Account",
         description: "Manage available application settings and preferences.",
       },
       {
-        number: "26",
+        number: "37",
         title: "Password Management",
         category: "Security",
         description:
           "Manage your account password through the dedicated password experience.",
-      },
-      {
-        number: "27",
-        title: "Account Management",
-        category: "Account",
-        description:
-          "Manage your Niramaya account and account-related actions.",
       },
     ],
   },
@@ -271,7 +325,7 @@ export const featureGroups: FeatureGroup[] = [
     accent: "dark",
     features: [
       {
-        number: "28",
+        number: "38",
         title: "Secure Authentication",
         category: "Security",
         description:
@@ -279,18 +333,24 @@ export const featureGroups: FeatureGroup[] = [
         highlight: true,
       },
       {
-        number: "29",
-        title: "Login & Signup",
+        number: "39",
+        title: "Login",
         category: "Account",
-        description:
-          "Create an account and securely return to your Niramaya experience.",
+        description: "Securely return to your Niramaya account.",
       },
       {
-        number: "30",
+        number: "40",
+        title: "Signup",
+        category: "Account",
+        description:
+          "Create a Niramaya account and begin your wellness experience.",
+      },
+      {
+        number: "41",
         title: "Personalized User Experience",
         category: "Personalization",
         description:
-          "Bring your profile, goals, progress and wellness exploration together around your own account.",
+          "Bring your profile, goals, progress and wellness exploration together around your account.",
       },
     ],
   },

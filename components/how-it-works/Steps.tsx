@@ -1,5 +1,5 @@
 import {
-  ArrowDown,
+  ArrowRight,
   BarChart3,
   Compass,
   HeartPulse,
@@ -88,98 +88,126 @@ const steps = [
 
 export default function Steps() {
   return (
-    <section className="bg-[#263F31] py-24 text-white sm:py-28">
+    <section className="relative overflow-hidden bg-[#263F31] text-white">
+      {/* Very subtle background detail */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-56 -top-56 h-[560px] w-[560px] rounded-full border border-white/[0.035]"
+      />
+
       <Container>
-        {/* Section intro */}
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
-            The journey
-          </span>
+        <div className="relative py-14 sm:py-16 lg:py-20">
+          {/* ====================================================== */}
+          {/* INTRO                                                  */}
+          {/* ====================================================== */}
 
-          <h2 className="mt-6 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl lg:text-6xl">
-            From your first step
-            <span className="block text-[#B8C9B3]">to everyday progress.</span>
-          </h2>
+          <div className="border-b border-white/10 pb-10 sm:pb-12">
+            <div className="max-w-4xl">
+              <div className="flex items-center gap-3">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#C65D3C]" />
 
-          <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-white/60 sm:text-base">
-            Niramaya connects the different parts of your wellness experience so
-            you can move from understanding yourself to setting goals, exploring
-            wellness and tracking your progress.
-          </p>
-        </div>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B8C9B3]">
+                  How it comes together
+                </span>
+              </div>
 
-        {/* Timeline */}
-        <div className="relative mx-auto mt-20 max-w-6xl">
-          {/* Desktop center line */}
-          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-white/10 lg:block" />
+              <h2 className="mt-5 max-w-4xl text-[2.7rem] font-semibold leading-[0.98] tracking-[-0.045em] text-white sm:text-5xl lg:text-[4.25rem]">
+                A simple journey,
+                <span className="block text-[#AFC2AA]">
+                  built around your wellbeing.
+                </span>
+              </h2>
 
-          <div className="space-y-8 lg:space-y-0">
+              <div className="mt-6 flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+                <p className="max-w-2xl text-sm leading-7 text-white/50 sm:text-base">
+                  Start with your personal context, choose where you want to
+                  focus, and use Niramaya to keep your journey moving.
+                </p>
+
+                <p className="shrink-0 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/25">
+                  08 steps · one connected experience
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* ====================================================== */}
+          {/* STEPS                                                  */}
+          {/* ====================================================== */}
+
+          <div>
             {steps.map((step, index) => {
               const Icon = step.icon;
-              const isLeft = index % 2 === 0;
+              const isLast = index === steps.length - 1;
 
               return (
-                <div
+                <article
                   key={step.number}
-                  className="relative lg:grid lg:min-h-[300px] lg:grid-cols-2 lg:items-center"
+                  className={[
+                    "group relative border-b border-white/10",
+                    isLast ? "border-b-0" : "",
+                  ].join(" ")}
                 >
-                  {/* Center number */}
-                  <div className="absolute left-1/2 top-1/2 z-20 hidden h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-[#263F31] text-xs font-bold text-[#B8C9B3] lg:flex">
-                    {step.number}
-                  </div>
-
-                  <div
-                    className={`${
-                      isLeft
-                        ? "lg:col-start-1 lg:pr-20"
-                        : "lg:col-start-2 lg:pl-20"
-                    }`}
-                  >
-                    <article className="group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.045] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.075] sm:p-8">
-                      {/* Large decorative number */}
-                      <span className="pointer-events-none absolute -right-3 -top-7 text-[100px] font-semibold leading-none text-white/[0.025] transition-transform duration-500 group-hover:scale-110">
+                  <div className="grid gap-5 py-7 sm:py-8 lg:grid-cols-[72px_210px_minmax(0,1fr)_44px] lg:items-center lg:gap-8 lg:py-9">
+                    {/* Number */}
+                    <div className="flex items-center">
+                      <span className="text-[11px] font-semibold tracking-[0.16em] text-[#78917B]">
                         {step.number}
                       </span>
+                    </div>
 
-                      <div className="relative">
-                        <div className="flex items-start justify-between gap-5">
-                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#B8C9B3]/10 text-[#B8C9B3]">
-                            <Icon className="h-5 w-5" />
-                          </div>
+                    {/* Category */}
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 text-[#AFC2AA]">
+                        <Icon className="h-[15px] w-[15px]" />
+                      </div>
 
-                          <span className="rounded-full border border-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/45">
-                            {step.tag}
-                          </span>
-                        </div>
+                      <div>
+                        <p className="text-[9px] font-bold uppercase tracking-[0.17em] text-[#AFC2AA]/75">
+                          {step.tag}
+                        </p>
 
-                        <p className="mt-7 text-xs font-semibold uppercase tracking-[0.18em] text-[#B8C9B3]/70">
+                        <p className="mt-0.5 text-xs text-white/30">
                           {step.eyebrow}
                         </p>
-
-                        <h3 className="mt-2 text-2xl font-semibold tracking-[-0.025em] text-white sm:text-3xl">
-                          {step.title}
-                        </h3>
-
-                        <p className="mt-4 max-w-md text-sm leading-6 text-white/55">
-                          {step.description}
-                        </p>
                       </div>
-                    </article>
-                  </div>
+                    </div>
 
-                  {/* Mobile number */}
-                  <div className="mb-3 flex items-center gap-3 lg:hidden">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#B8C9B3]/10 text-xs font-bold text-[#B8C9B3]">
-                      {step.number}
-                    </span>
+                    {/* Main content */}
+                    <div className="lg:pl-2">
+                      <h3 className="text-xl font-medium tracking-[-0.025em] text-white transition-colors duration-200 group-hover:text-[#C8D7C3] sm:text-[1.45rem]">
+                        {step.title}
+                      </h3>
 
-                    {index < steps.length - 1 && (
-                      <ArrowDown className="h-4 w-4 text-white/25" />
-                    )}
+                      <p className="mt-1.5 max-w-2xl text-sm leading-6 text-white/42">
+                        {step.description}
+                      </p>
+                    </div>
+
+                    {/* Arrow */}
+                    <div className="hidden lg:flex lg:justify-end">
+                      <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/20 transition-all duration-300 group-hover:border-[#AFC2AA]/35 group-hover:text-[#AFC2AA]">
+                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </article>
               );
             })}
+          </div>
+
+          {/* ====================================================== */}
+          {/* FOOTER                                                 */}
+          {/* ====================================================== */}
+
+          <div className="flex flex-col gap-3 border-t border-white/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-xs text-white/30">
+              From your profile to your progress.
+            </p>
+
+            <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#78917B]">
+              Niramaya · Everyday wellbeing
+            </p>
           </div>
         </div>
       </Container>

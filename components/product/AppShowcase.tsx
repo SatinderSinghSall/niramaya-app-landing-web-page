@@ -1,5 +1,15 @@
-import { Activity, BarChart3, HeartPulse, Leaf, Target } from "lucide-react";
+import Image from "next/image";
+import {
+  BarChart3,
+  HeartPulse,
+  Leaf,
+  Target,
+  ArrowUpRight,
+} from "lucide-react";
+
 import Container from "@/components/common/Container";
+
+import screen3 from "@/assets/images/app-screenshots/Screen-5.jpg";
 
 const stats = [
   {
@@ -8,7 +18,7 @@ const stats = [
   },
   {
     icon: Target,
-    label: "Goals",
+    label: "Personal goals",
   },
   {
     icon: BarChart3,
@@ -22,97 +32,124 @@ const stats = [
 
 export default function AppShowcase() {
   return (
-    <section className="overflow-hidden bg-[#EEF2E6] py-24 sm:py-28">
-      <Container>
-        <div className="grid items-center gap-16 lg:grid-cols-[0.75fr_1.25fr] lg:gap-24">
-          <div>
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#4D6A50]">
-              One connected experience
-            </span>
+    <section className="relative overflow-hidden border-b border-[#D9E2D5] bg-[#EEF2E6]">
+      {/* Background detail */}
+      <div className="pointer-events-none absolute -right-[260px] top-1/2 h-[620px] w-[620px] -translate-y-1/2 rounded-full border border-[#C8D6C4]/70" />
 
-            <h2 className="mt-5 text-4xl font-semibold leading-[1.04] tracking-[-0.04em] text-[#263F31] sm:text-5xl">
+      <div className="pointer-events-none absolute -right-[140px] top-1/2 h-[380px] w-[380px] -translate-y-1/2 rounded-full border border-[#D5DFD1]/80" />
+
+      <Container>
+        <div className="relative grid items-center gap-10 py-12 sm:py-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 lg:py-16">
+          {/* =========================================================
+              LEFT CONTENT
+          ========================================================== */}
+          <div className="relative z-10 max-w-[570px]">
+            {/* Eyebrow */}
+            <div className="flex items-center gap-3">
+              <span className="h-px w-7 bg-[#4D6A50]" />
+
+              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#4D6A50]">
+                One connected experience
+              </p>
+            </div>
+
+            {/* Heading */}
+            <h2 className="mt-4 max-w-[560px] text-[2.7rem] font-semibold leading-[0.98] tracking-[-0.05em] text-[#263F31] sm:text-5xl lg:text-[3.65rem]">
               Everything you need,
-              <span className="block text-[#4D6A50]">
-                without losing the bigger picture.
-              </span>
+              <span className="block text-[#4D6A50]">in one place.</span>
             </h2>
 
-            <p className="mt-6 max-w-lg text-sm leading-7 text-[#6D796F] sm:text-base">
-              Your profile, goals, progress and wellness discovery tools live
-              together inside the Niramaya mobile experience.
+            {/* Description */}
+            <p className="mt-5 max-w-[500px] text-[15px] leading-7 text-[#68766B] sm:text-base">
+              Your wellness profile, goals, progress and everyday discovery come
+              together inside the Niramaya app.
             </p>
 
-            <div className="mt-9 grid grid-cols-2 gap-3">
-              {stats.map((stat) => {
-                const Icon = stat.icon;
+            {/* Feature list */}
+            <div className="mt-7 max-w-[510px] border-y border-[#D2DDD0]">
+              <div className="grid grid-cols-2">
+                {stats.map((stat, index) => {
+                  const Icon = stat.icon;
 
-                return (
-                  <div
-                    key={stat.label}
-                    className="rounded-2xl border border-[#DCE4D7] bg-white p-4"
-                  >
-                    <Icon className="h-4 w-4 text-[#4D6A50]" />
+                  return (
+                    <div
+                      key={stat.label}
+                      className={[
+                        "flex items-center gap-3 py-3.5",
+                        index % 2 === 0
+                          ? "border-r border-[#D2DDD0] pr-4"
+                          : "pl-4",
+                        index < 2 ? "border-b border-[#D2DDD0]" : "",
+                      ].join(" ")}
+                    >
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#C8D6C4] bg-[#F7F9F4]">
+                        <Icon className="h-3.5 w-3.5 text-[#4D6A50]" />
+                      </span>
 
-                    <p className="mt-4 text-xs font-semibold text-[#263F31]">
-                      {stat.label}
-                    </p>
-                  </div>
-                );
-              })}
+                      <span className="text-xs font-semibold text-[#263F31]">
+                        {stat.label}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Bottom editorial line */}
+            <div className="mt-6 flex items-center gap-3">
+              <span className="h-px w-8 bg-[#AEBDAA]" />
+
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#788579]">
+                Personal · Practical · Connected
+              </p>
             </div>
           </div>
 
-          {/* Screenshot frame */}
-          <div className="relative">
-            <div className="absolute -right-10 top-10 h-64 w-64 rounded-full bg-[#D9E4D5] blur-3xl" />
+          {/* =========================================================
+              RIGHT PRODUCT PRESENTATION
+          ========================================================== */}
+          <div className="relative flex min-h-[430px] items-center justify-center lg:min-h-[470px]">
+            {/* Soft glow behind phone */}
+            <div className="pointer-events-none absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C8D8C3]/50 blur-[75px]" />
 
-            <div className="relative rounded-[2.5rem] border border-[#DCE4D7] bg-white p-4 shadow-[0_30px_80px_rgba(38,63,49,0.12)] sm:p-6">
-              <div className="flex items-center justify-between border-b border-[#E3E7DF] pb-5">
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#929B92]">
-                    App preview
-                  </p>
+            {/* Soft vertical product panel */}
+            <div className="absolute left-1/2 top-1/2 h-[390px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-[3.5rem] bg-[#DCE6D8]" />
 
-                  <p className="mt-1 text-sm font-semibold text-[#263F31]">
-                    Dashboard experience
-                  </p>
-                </div>
-
-                <Activity className="h-5 w-5 text-[#4D6A50]" />
-              </div>
-
-              {/* Real screenshot goes here */}
-              <div className="mt-5 flex min-h-[420px] items-center justify-center rounded-[2rem] bg-[#F5F7F2] p-6">
-                <div className="w-full max-w-[250px] overflow-hidden rounded-[2.4rem] border-[6px] border-[#263F31] bg-[#263F31] p-1.5 shadow-2xl">
-                  <div className="flex h-[470px] flex-col rounded-[2rem] bg-[#EEF2E6]">
-                    <div className="px-5 pt-6">
-                      <div className="h-2 w-14 rounded-full bg-[#C8D3C5]" />
-                      <div className="mt-3 h-5 w-32 rounded-full bg-[#263F31]/15" />
-                    </div>
-
-                    <div className="mx-4 mt-7 rounded-3xl bg-[#263F31] p-5">
-                      <div className="h-2 w-20 rounded-full bg-white/20" />
-                      <div className="mt-3 h-6 w-28 rounded-full bg-white/10" />
-
-                      <div className="mt-7 h-2 rounded-full bg-white/10">
-                        <div className="h-2 w-3/5 rounded-full bg-[#B8C9B3]" />
-                      </div>
-                    </div>
-
-                    <div className="mt-4 grid grid-cols-2 gap-3 px-4">
-                      <div className="h-24 rounded-2xl bg-white" />
-                      <div className="h-24 rounded-2xl bg-white" />
-                    </div>
-
-                    <div className="mx-4 mt-4 h-28 rounded-2xl bg-white" />
+            {/* Phone */}
+            <div className="relative z-10 w-[235px] sm:w-[255px] lg:w-[265px]">
+              <div className="rounded-[3rem] border-[7px] border-[#17271D] bg-[#17271D] p-1.5 shadow-[0_32px_70px_rgba(38,63,49,0.2)]">
+                <div className="overflow-hidden rounded-[2.35rem] bg-white">
+                  <div className="relative aspect-[9/20] w-full">
+                    <Image
+                      src={screen3}
+                      alt="Niramaya mobile application"
+                      fill
+                      priority
+                      sizes="265px"
+                      className="object-cover object-top"
+                    />
                   </div>
                 </div>
               </div>
+            </div>
 
-              <p className="mt-4 text-center text-xs text-[#929B92]">
-                Replace this preview with the actual Niramaya mobile screenshot.
+            {/* Small product label */}
+            <div className="absolute bottom-4 left-[calc(50%+105px)] z-20 hidden w-[150px] border border-[#C9D6C5] bg-[#F7F9F4] px-4 py-3 sm:block">
+              <div className="flex items-center justify-between">
+                <p className="text-[9px] font-semibold uppercase tracking-[0.16em] text-[#899489]">
+                  Inside Niramaya
+                </p>
+
+                <ArrowUpRight className="h-3.5 w-3.5 text-[#4D6A50]" />
+              </div>
+
+              <p className="mt-1 text-xs font-semibold leading-5 text-[#263F31]">
+                Built around your journey
               </p>
             </div>
+
+            {/* Small decorative marker */}
+            <div className="absolute left-[calc(50%-180px)] top-12 hidden h-2 w-2 rounded-full bg-[#C65D3C] sm:block" />
           </div>
         </div>
       </Container>
