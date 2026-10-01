@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 
 type ResourceCardProps = {
+  number: string;
   title: string;
   description: string;
   category: string;
@@ -25,6 +26,7 @@ const icons = {
 };
 
 export default function ResourceCard({
+  number,
   title,
   description,
   category,
@@ -39,8 +41,14 @@ export default function ResourceCard({
       className="group block border border-[#E3E7DF] bg-white p-7 transition duration-300 hover:-translate-y-1 hover:border-[#C9D3C5] hover:shadow-[0_18px_50px_rgba(38,63,49,0.07)]"
     >
       <div className="flex items-start justify-between">
-        <div className="flex h-11 w-11 items-center justify-center bg-[#EEF2E6]">
-          <Icon className="h-5 w-5 text-[#4D6A50]" />
+        <div className="flex items-center gap-3">
+          <span className="text-[10px] font-bold tracking-[0.18em] text-[#9AA49B]">
+            {number}
+          </span>
+
+          <div className="flex h-11 w-11 items-center justify-center bg-[#EEF2E6]">
+            <Icon className="h-5 w-5 text-[#4D6A50]" />
+          </div>
         </div>
 
         <ArrowUpRight className="h-5 w-5 text-[#929B92] transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#4D6A50]" />
