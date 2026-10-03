@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   shortName: "NIRAMAYA",
   description:
     "Niramaya is a personalized wellness app for understanding your wellbeing, setting goals, tracking progress, and discovering Yoga and Ayurveda.",
-  url: "https://niramaya.app",
+  url: "https://niramaya-mobile.vercel.app",
   email: "hello@niramaya.app",
 } as const;
 

@@ -16,6 +16,7 @@ const routes = [
   "/privacy",
   "/terms",
   "/disclaimer",
+  "/delete-account",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
