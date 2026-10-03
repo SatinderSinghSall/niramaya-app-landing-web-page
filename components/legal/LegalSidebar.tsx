@@ -23,6 +23,10 @@ const documents = [
     href: "/disclaimer",
     label: "Disclaimer",
   },
+  {
+    href: "/delete-account",
+    label: "Delete Account",
+  },
 ];
 
 export default function LegalSidebar({ sections }: LegalSidebarProps) {

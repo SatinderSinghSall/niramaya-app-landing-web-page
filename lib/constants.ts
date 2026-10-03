@@ -93,5 +93,9 @@ export const FOOTER_LINKS = {
       label: "Wellness Disclaimer",
       href: "/disclaimer",
     },
+    {
+      label: "Delete Account",
+      href: "/delete-account",
+    },
   ],
 } as const;

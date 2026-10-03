@@ -456,7 +456,7 @@ export default function LandingAppNotice() {
 
                 <div className="border-l-2 border-[#B8C9B3] pl-3">
                   <p className="text-[13px] font-semibold text-[#263F31]">
-                    Soni Vaubhav Kumar
+                    Soni Vaibhav Kumar
                   </p>
                 </div>
               </div>
