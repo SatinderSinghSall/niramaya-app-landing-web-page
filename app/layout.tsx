@@ -40,6 +40,10 @@ export const metadata: Metadata = {
 
   creator: "Niramaya",
 
+  verification: {
+    google: "CLiuOeX7kVXX7mFQV5wkswIWOEorAvp-yr8K4co_IhE",
+  },
+
   alternates: {
     canonical: "/",
   },
