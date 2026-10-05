@@ -195,6 +195,82 @@ export default function Navbar() {
                 </svg>
               </span>
             </Link>
+
+            {/* =================================================
+                ADMIN PANEL
+            ================================================= */}
+
+            <a
+              href="https://niramaya-admin-panel.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                group
+                ml-3
+                inline-flex
+                h-[47px]
+                items-center
+                gap-2.5
+                rounded-[10px]
+                border
+                border-[#C9D4CE]
+                bg-[#FCFBF7]
+                px-5
+                shadow-[0_3px_10px_rgba(33,68,56,0.06)]
+                transition-all
+                duration-300
+                hover:-translate-y-[1px]
+                hover:border-[#214438]
+                hover:bg-[#F3F6F1]
+                hover:shadow-[0_6px_16px_rgba(33,68,56,0.10)]
+              "
+            >
+              <span
+                className="
+                  whitespace-nowrap
+                  text-[13px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.08em]
+                  text-[#214438]
+                "
+              >
+                Admin Panel
+              </span>
+
+              <span
+                className="
+                  flex
+                  h-[25px]
+                  w-[25px]
+                  shrink-0
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-[#214438]/8
+                  transition-all
+                  duration-300
+                  group-hover:translate-x-[2px]
+                  group-hover:bg-[#214438]/12
+                "
+              >
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 10L10 4M5 4H10V9"
+                    stroke="#214438"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+            </a>
           </nav>
 
           {/* =====================================================

@@ -60,13 +60,86 @@ export default function Footer() {
           <FooterColumn title="Legal" links={FOOTER_LINKS.legal} />
         </div>
 
-        <div className="flex flex-col gap-3 border-t border-[#E3E7DF] py-6 text-sm text-[#929B92] sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-4 border-t border-[#E3E7DF] py-6 text-sm text-[#929B92] sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} {SITE_CONFIG.name}. All rights
             reserved.
           </p>
 
-          <p>Built for a healthier everyday.</p>
+          <div className="flex flex-wrap items-center gap-4">
+            <p>Built for a healthier everyday.</p>
+
+            <span className="h-4 w-px bg-[#D9DED8]" />
+
+            <a
+              href="https://niramaya-admin-panel.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                group
+                ml-3
+                inline-flex
+                h-[47px]
+                items-center
+                gap-2.5
+                rounded-[10px]
+                bg-[#B86F52]
+                px-5
+                shadow-[0_4px_12px_rgba(184,111,82,0.16)]
+                transition-all
+                duration-300
+                hover:-translate-y-[1px]
+                hover:bg-[#A96046]
+                hover:shadow-[0_7px_18px_rgba(184,111,82,0.22)]
+              "
+            >
+              <span
+                className="
+                  whitespace-nowrap
+                  text-[13px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.08em]
+                  !text-white
+                "
+              >
+                Admin Panel
+              </span>
+
+              <span
+                className="
+                  flex
+                  h-[27px]
+                  w-[27px]
+                  shrink-0
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-white/15
+                  transition-all
+                  duration-300
+                  group-hover:translate-x-[2px]
+                  group-hover:bg-white/20
+                "
+              >
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 10L10 4M5 4H10V9"
+                    stroke="#FFFFFF"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
         </div>
       </Container>
     </footer>

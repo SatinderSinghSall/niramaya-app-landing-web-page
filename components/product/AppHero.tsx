@@ -126,15 +126,31 @@ export default function AppHero() {
   return (
     <section className="relative overflow-hidden bg-[#263F31] text-white">
       {/* Background detail */}
+
       <div className="pointer-events-none absolute -right-56 -top-64 h-[680px] w-[680px] rounded-full border border-white/[0.055]" />
 
       <div className="pointer-events-none absolute -bottom-72 -left-56 h-[600px] w-[600px] rounded-full border border-white/[0.045]" />
 
       <Container>
-        <div className="relative grid items-center gap-8 py-10 sm:py-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-2 lg:py-14 xl:py-16">
+        <div
+          className="
+            relative
+            grid
+            items-center
+            gap-10
+            py-10
+            sm:gap-12
+            sm:py-12
+            lg:grid-cols-[0.92fr_1.08fr]
+            lg:gap-2
+            lg:py-14
+            xl:py-16
+          "
+        >
           {/* =========================================================
               LEFT — HERO COPY
           ========================================================== */}
+
           <div className="relative z-10 max-w-[650px]">
             <div className="inline-flex items-center gap-2 border border-white/10 bg-white/[0.035] px-3.5 py-2">
               <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#B8C9B3]/10">
@@ -146,7 +162,19 @@ export default function AppHero() {
               </span>
             </div>
 
-            <h1 className="mt-6 max-w-[650px] text-[3.2rem] font-semibold leading-[0.94] tracking-[-0.055em] sm:text-[4.2rem] lg:text-[4.55rem] xl:text-[4.9rem]">
+            <h1
+              className="
+                mt-6
+                max-w-[650px]
+                text-[2.85rem]
+                font-semibold
+                leading-[0.96]
+                tracking-[-0.055em]
+                sm:text-[4.2rem]
+                lg:text-[4.55rem]
+                xl:text-[4.9rem]
+              "
+            >
               Your wellness
               <br />
               journey,
@@ -162,7 +190,22 @@ export default function AppHero() {
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="#screens"
-                className="group inline-flex h-[48px] items-center justify-center gap-3 rounded-full bg-[#F5F7F1] pl-5 pr-2 !text-[#263F31] transition-colors duration-200 hover:bg-white"
+                className="
+                  group
+                  inline-flex
+                  h-[48px]
+                  items-center
+                  justify-center
+                  gap-3
+                  rounded-full
+                  bg-[#F5F7F1]
+                  pl-5
+                  pr-2
+                  !text-[#263F31]
+                  transition-colors
+                  duration-200
+                  hover:bg-white
+                "
               >
                 <span className="text-sm font-semibold !text-[#263F31]">
                   See the app
@@ -175,7 +218,22 @@ export default function AppHero() {
 
               <Link
                 href="/features"
-                className="inline-flex h-[48px] items-center justify-center rounded-full border border-white/15 px-6 text-sm font-semibold !text-white transition-colors duration-200 hover:bg-white/[0.06]"
+                className="
+                  inline-flex
+                  h-[48px]
+                  items-center
+                  justify-center
+                  rounded-full
+                  border
+                  border-white/15
+                  px-6
+                  text-sm
+                  font-semibold
+                  !text-white
+                  transition-colors
+                  duration-200
+                  hover:bg-white/[0.06]
+                "
               >
                 Explore features
               </Link>
@@ -191,26 +249,77 @@ export default function AppHero() {
           </div>
 
           {/* =========================================================
-              RIGHT — THREE PHONE COMPOSITION
+              RIGHT — RESPONSIVE PHONE COMPOSITION
           ========================================================== */}
+
           <div
             id="screens"
-            className="relative flex min-h-[445px] items-center justify-center lg:min-h-[500px]"
+            className="
+              relative
+              flex
+              min-h-[360px]
+              items-center
+              justify-center
+              overflow-hidden
+              sm:min-h-[445px]
+              lg:min-h-[500px]
+            "
           >
             {/* Soft background glow */}
-            <div className="pointer-events-none absolute left-1/2 top-1/2 h-[310px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#4D6A50]/20 blur-[85px]" />
 
-            {/*
-              IMPORTANT:
-              No negative margins.
-              No absolute positioning between phones.
-              Small controlled gap only.
+            <div
+              className="
+                pointer-events-none
+                absolute
+                left-1/2
+                top-1/2
+                h-[260px]
+                w-[300px]
+                -translate-x-1/2
+                -translate-y-1/2
+                rounded-full
+                bg-[#4D6A50]/20
+                blur-[70px]
+                sm:h-[310px]
+                sm:w-[420px]
+                sm:blur-[85px]
+              "
+            />
 
-              This keeps all 3 phones visually separated.
-            */}
-            <div className="relative z-10 flex items-end justify-center gap-2 sm:gap-2.5 lg:gap-2.5">
+            {/* =======================================================
+                PHONE COMPOSITION
+
+                Mobile:
+                - Only the main phone is shown.
+                - Prevents horizontal overflow.
+
+                Tablet/Desktop:
+                - Three-phone composition returns.
+            ======================================================== */}
+
+            <div
+              className="
+                relative
+                z-10
+                flex
+                items-end
+                justify-center
+                gap-2
+                sm:gap-2.5
+              "
+            >
               {/* LEFT PHONE */}
-              <div className="w-[126px] shrink-0 sm:w-[145px] lg:w-[158px] xl:w-[170px]">
+
+              <div
+                className="
+                  hidden
+                  w-[145px]
+                  shrink-0
+                  sm:block
+                  lg:w-[158px]
+                  xl:w-[170px]
+                "
+              >
                 <PhoneFrame
                   image={screens[leftIndex]}
                   label={screenLabels[leftIndex]}
@@ -220,7 +329,18 @@ export default function AppHero() {
               </div>
 
               {/* MAIN PHONE */}
-              <div className="relative z-20 w-[168px] shrink-0 sm:w-[188px] lg:w-[204px] xl:w-[218px]">
+
+              <div
+                className="
+                  relative
+                  z-20
+                  w-[158px]
+                  shrink-0
+                  sm:w-[188px]
+                  lg:w-[204px]
+                  xl:w-[218px]
+                "
+              >
                 <PhoneFrame
                   image={screens[centerIndex]}
                   label={screenLabels[centerIndex]}
@@ -229,7 +349,17 @@ export default function AppHero() {
               </div>
 
               {/* RIGHT PHONE */}
-              <div className="w-[126px] shrink-0 sm:w-[145px] lg:w-[158px] xl:w-[170px]">
+
+              <div
+                className="
+                  hidden
+                  w-[145px]
+                  shrink-0
+                  sm:block
+                  lg:w-[158px]
+                  xl:w-[170px]
+                "
+              >
                 <PhoneFrame
                   image={screens[rightIndex]}
                   label={screenLabels[rightIndex]}
@@ -239,10 +369,32 @@ export default function AppHero() {
             </div>
 
             {/* Rotation indicator */}
-            <div className="absolute bottom-1 left-1/2 z-30 flex -translate-x-1/2 items-center gap-2">
+
+            <div
+              className="
+                absolute
+                bottom-0
+                left-1/2
+                z-30
+                flex
+                -translate-x-1/2
+                items-center
+                gap-2
+                sm:bottom-1
+              "
+            >
               <span className="h-1.5 w-6 rounded-full bg-[#B8C9B3]" />
 
-              <span className="text-[9px] font-semibold uppercase tracking-[0.18em] text-white/30">
+              <span
+                className="
+                  whitespace-nowrap
+                  text-[9px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.18em]
+                  text-white/30
+                "
+              >
                 {String(startIndex + 1).padStart(2, "0")} / 28
               </span>
             </div>
@@ -284,7 +436,7 @@ function PhoneFrame({
             alt={label}
             fill
             priority={priority}
-            sizes="(max-width: 640px) 126px, (max-width: 1024px) 158px, 218px"
+            sizes="(max-width: 639px) 158px, (max-width: 1024px) 204px, 218px"
             className="object-cover object-top"
           />
         </div>

@@ -256,6 +256,8 @@ export default function MobileMenu() {
               p-4
             "
           >
+            {/* Explore App */}
+
             <Link
               href="/app"
               onClick={() => setOpen(false)}
@@ -321,6 +323,77 @@ export default function MobileMenu() {
                 </svg>
               </span>
             </Link>
+
+            {/* Admin Panel */}
+
+            <a
+              href="https://niramaya-admin-panel.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="
+                group
+                mt-2.5
+                flex
+                h-[52px]
+                w-full
+                items-center
+                justify-between
+                rounded-[10px]
+                bg-[#B86F52]
+                px-5
+                text-white
+                shadow-[0_5px_14px_rgba(184,111,82,0.16)]
+                transition-all
+                duration-300
+                hover:bg-[#A96046]
+                active:scale-[0.99]
+              "
+            >
+              <span
+                className="
+                  text-[12px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.11em]
+                  !text-white
+                "
+              >
+                Admin Panel
+              </span>
+
+              <span
+                className="
+                  flex
+                  h-[29px]
+                  w-[29px]
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-white/15
+                  transition-all
+                  duration-300
+                  group-hover:translate-x-1
+                  group-hover:bg-white/20
+                "
+              >
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 10L10 4M5 4H10V9"
+                    stroke="#FFFFFF"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+            </a>
           </div>
         </div>
       )}
