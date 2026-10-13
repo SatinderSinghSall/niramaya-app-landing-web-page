@@ -282,6 +282,93 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+      {/* =========================================================
+          SECONDARY NAVBAR
+          Added below the original navbar.
+          Original navbar above remains unchanged.
+      ========================================================= */}
+
+      <nav
+        aria-label="Explore Niramaya"
+        className="border-t border-[#E7E3DA] bg-[#F5F4ED]"
+      >
+        <div
+          className="
+            mx-auto max-w-[1500px]
+            overflow-x-auto
+            [scrollbar-width:none]
+            [&::-webkit-scrollbar]:hidden
+            sm:px-8 lg:px-10 xl:px-12
+          "
+        >
+          <div
+            className="
+              flex w-max min-w-full items-center
+              justify-start gap-0
+              px-4 sm:px-0
+              lg:justify-center
+            "
+          >
+            {[
+              { label: "Yoga", href: "/yoga" },
+              { label: "Ayurveda", href: "/ayurveda" },
+              { label: "Wellness", href: "/wellness" },
+              { label: "Contact", href: "/contact" },
+              { label: "Resources", href: "/resources" },
+              { label: "FAQ", href: "/faq" },
+              { label: "Privacy Policy", href: "/privacy" },
+              { label: "Terms & Conditions", href: "/terms" },
+              { label: "Wellness Disclaimer", href: "/disclaimer" },
+              { label: "Delete Account", href: "/delete-account" },
+            ].map((item) => {
+              const isActive =
+                pathname === item.href || pathname.startsWith(`${item.href}/`);
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  aria-current={isActive ? "page" : undefined}
+                  className={`
+                    group relative
+                    flex shrink-0 items-center
+                    px-5 py-[13px]
+                    text-[12px] sm:text-[13px]
+                    font-medium tracking-[0.025em]
+                    transition-colors duration-200
+                    ${
+                      isActive
+                        ? "text-[#214438]"
+                        : "text-[#687169] hover:text-[#214438]"
+                    }
+                  `}
+                >
+                  {item.label}
+
+                  {/* Active / hover underline */}
+                  <span
+                    className={`
+                      absolute bottom-0
+                      left-5 right-5
+                      h-[2px]
+                      rounded-full
+                      bg-[#B86F52]
+                      origin-center
+                      transition-transform duration-200
+                      ${
+                        isActive
+                          ? "scale-x-100"
+                          : "scale-x-0 group-hover:scale-x-100"
+                      }
+                    `}
+                  />
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </nav>
     </header>
   );
 }
